@@ -1,0 +1,80 @@
+/*Degan meenggunakan animation kita dapat merubah elemen visual html secara halus, dengan memiliki lebih dari 2 keadaam */
+/*Paramerter yang bisa digunakan :
+  animation:(name) (durasi) (delay) (timing-funcition) (interation-count) (direction) (fill-mode) (play-state)*/
+ /*1. name = wajib ditambahkan dan harus sama dengan nama keyframes
+   2. interation-count = sama seperti looping valuenya: (angka(1,2 dan -n) dan infinite(untuk mengulang secara terus menerus)
+   3. direction = dijalankan dari awal atau akhir valuenya: normal, reverse(dari akhir-keawal), 
+      alternate(awal ke akhir dan akhir ke awal), 
+      alternate-reverse (gantian TAPI dimulai dari akhir) 
+   4. fill-mode = agar ketika sampai diakhir, elemnya tidak loncat keawal valuenya: forwards (tidak kembali), 
+   backwards (kembali)
+     dan both (tidak kembali)
+    5.play-state = untuk menjalankan dan memberhentikan animasi valuenya= running dan 
+    paused(akan berhenti ketika digunakan di css, maka dari itu nanti digunakan di .JS)*/
+
+
+.container {
+	width: 800px;
+	border: 2px double black;
+	margin: 20px auto 0;
+}
+.kotak1 {
+	width: 100px;
+	height: 100px;
+	background-color: limegreen;
+	margin: 2px;
+	
+}
+
+@keyframes animasi {
+	from {
+		background-color: yellow;
+	}
+	to {
+		margin-left: 700px;
+		background-color: blue;
+		transform: rotate(760deg);
+	}
+}
+
+.container:hover .kotak1{
+	animation-name: animasi;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-direction: infinite;
+	animation-fill-mode: both;
+	animation-play-state: running;
+}
+
+.kotak2 {
+	width: 200px;
+	height: 200px;
+	background-color: gray;
+	animation: animasi2 2s ease 3 alternate both;
+}
+
+@keyframes animasi2 {
+	0% {
+		background-color: red;
+	}
+	20% {
+		margin-left: 100px;
+	}
+	40% {
+		margin-top: 200px;
+		background-color: blue;
+	}
+	60% {
+		transform: scale(1.5);
+	}
+	80% {
+		width: 400px;
+		height: 400px;
+	}
+	100% {
+		transform: rotate(360deg);
+		width: 20px;
+		height: 20px;
+	}
+}
+

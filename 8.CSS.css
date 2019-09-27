@@ -1,0 +1,27 @@
+div {
+	width: 400px;
+	height: 200px;
+	margin: 20px auto;
+}
+.satu {
+	/*Radia-gradient digunakan untuk membuat efek gradasi lingkaran*/
+	/*Value pendeknya : radial-gradient(warnha1, warnah2, wrnah-n)*/
+	/*value lengkapnya : radial-gradient(tipe  jangkauan at posisi Y, posisi X), (Warnah1,warnah2)*/
+	background: radial-gradient(yellow,red,green, blue);
+}
+.dua {
+	/*tipe= ellipse dan circle */
+	/*jangkauan=closest-side (sisi terdekat) , closest-corner
+				farthest-corner (sudut terjauh) dan farthest-side (sudut terjauh)*/
+
+	/*Gradasinya Akan mencari sisi yang terdekat*/
+	background: radial-gradient(circle closest-corner, lime,salmon);
+}
+.tiga {
+	/*Gradasinya akan mencari sudut yang terjauh*/
+	background-image: radial-gradient(farthest-corner, red, yellow);
+}
+.empat {
+	/*Untuk merubah posis kita bisa meenggunakan top, left, right, bottom ATAU 	gunakan PX(y baru x)*/
+   background: radial-gradient(circle farthest-side at 20px 10px, yellow, green, red , lime);
+}

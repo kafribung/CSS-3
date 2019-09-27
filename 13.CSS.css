@@ -1,0 +1,72 @@
+/*Transition ditujakan untuk merubah nilai dari property SECARA HALUS*/
+/*Perbedaan antara transition dengan animation :
+1. Transition hanya meliliki 2 keadaan yaitu keadaan awal dan keadaan akhri
+2.  Animation meiliki lebih dari 2 keaadaan, atau memiliki banyak keyframe*/
+
+/*Transition memiliki 4 jenis parameter, parameter terpenring iyalah DURASI, yg lainnya hanya optional :
+transition: <property> <durasi> <fungsi> <delay> */
+
+/*transisi selalu dideklarasikan dalam KEADAAN awal*/
+/*Contoh durasi :   transition: 1s;
+
+  Contoh property:  Valuenya : ALL, NAMA PROPERTY, NONE
+  					transition: all 1s;   all adalah property default, biar tidak ditulis ttp dijalankan
+                    transition: transfrom 1s;  berarti yang dijalankan secara halus hanya transfrom yg lain instan
+
+   Contoh fungsi (Timing Funcition): Valuenya : ease (Default),  ease-in, ease-out, ease-in-out, linear dan cubic-bezier  
+                    transition: 3s ease-in-out;
+           
+    Contoh delay: digunakan untuk memberikan waktu pengeksekusian sesuai dengan waktu yg diberikan
+ 					transition: 3s 2s;   */
+
+
+ /*Property yang tidak bisa kita berikan transition : Font-Familly, display dan position*/
+ .container {
+ 	width: 900px;
+ 	margin: 20px auto;
+ 	border: 2px solid black;  
+ }
+ .kotak {
+ 	width: 90px;
+ 	height: 90px;
+ 	margin: 5px;
+ 	background-color: lightgreen;
+ 	text-align: center;
+ 	line-height: 90px;
+ }
+ /*Ease timing-fungsi default*/
+ /*Waktu delaynya yakni 2 second*/
+ .kotak1 {
+ 	transition-property: none;
+ 	transition-duration: 4s;
+ 	transition-delay: 2s;
+ 	transition-timing-function: ease;  
+ }
+ /*Ease-in timing-fungsi Pelan diawal lalu ngebut diakhir*/
+ .kotak2 {
+ 	transition: 3s ease-in;
+ }
+ /*Ease-out timing-fungsi default Kencang diawal pelan diakhir*/
+ .kotak3 {
+ 	transition: 3s ease-out;
+ }
+ /*Ease-in-out timing-fungsi Pelan kencang kemudian pelan*/
+
+ .kotak4 {
+ 	transition: 3s ease-in-out;
+ }
+ /*linear timing-fungsi normal*/
+ .kotak5 {
+ 	transition: 3s linear;
+ }
+ /*cubic-bezier timing-fungsi yang diatur menggunakan inspect-element, EFEK yg dihasilkan yakni pengereman diakhir*/
+ .kotak6 {
+ 	transition: 3s cubic-bezier(1,.29,.7,1.28)
+ }
+
+ /*Agar elemen kotaknya tidak putus2 pada saat dihover yang diberikan beban adalah parentnya*/
+ .container:hover .kotak{
+ 	transform: rotate(720deg);
+ 	margin-left: 800px;
+ 	background-color: salmon;
+ }

@@ -1,0 +1,24 @@
+body {
+	background-image:url(2oriental.png); 
+}
+.satu {
+	width: 200px;
+	height: 200px;
+	background-color: orange;
+	position: relative;
+
+	/*Value dari Opacity mulai dari 0-1 contoh:  40%=0.4 atau .5 (nolnya tidak ditulis) 1=  warnahnya utuh, 
+	0= transfaransinya full (Gambarnya Hilang)*/
+	/*KEKURANGAN OPACITY child akan mengikuti opacity dari parentnya, untuk mengakali gunakan rgba dan hsla*/
+	opacity:.3;
+}
+.dua {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	position: absolute;
+	right: -50px;
+	bottom: -40px;
+	/*Kotak ke-2 akan tetap opacty terhadap kotak pertama walau atributnya dihapus,*/
+	/*opacity: .4;*/
+}

@@ -1,0 +1,28 @@
+/*Vendor-Perefix adalah tehnik di CCS3 yang kita gunakan agar CSS3 kita kompetible dengan semua browswer*/
+/*Vendor =browser Prefix= Awalan*/
+/*Alasan menggunakan Vendor-Prefix karena belum semua browser itu support dengan CSS3 (UNTUK SAAT INI) */
+/*Cara menggunakan vendor-prefix :
+1. -webkit-css3nya:valuenya (crome, safari, opera)
+2. -moz- (mozilla)
+3.-ms- (Internet Eksploler)
+4.-o- (Opera)*/
+
+/*Agar mengetahui browser apa yg belum support css3 gunakan :
+1.Shouldiprefix.com
+2.Canuse.com
+3. Pleeease.io/play (Tinggal copy aja cssnya secara otomatis langsung dibuatkan)
+
+4. Gunakan pullgin emmet*/
+
+body {
+	text-align: center;
+}
+img {
+	/*Menggunakan bantuan pleease.io/play*/
+	filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+	-webkit-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	filter: grayscale(100%);
+	height: 400px;
+	width: 400px;
+}

@@ -1,0 +1,41 @@
+/*Border Radius digunanakan untuk membuat kotak menjadi tumpul*/
+span {
+	display: inline-block;
+	width: 300px;
+	height: 300px;
+	
+	/*Untuk Semua Sisi :
+	border-radius: ;
+	border-radius: 0 50% 50% 20%; */
+
+	/*Untuk Sudut yang diiginkan : 
+	border-top-right-radius : 50px;
+	border-bottom-left-radius: 30px; */
+
+	/*Untuk Boreder Radius keseluruhan sisi :  */
+	/*Agar kotak menjadi lingkaran penuh,  border radius harus stengah dari widht dan heightnya*/
+	border-radius: 50%;
+
+	border: 2px solid #666;
+	font-family: "arial black";
+	color: white;
+	text-align: center;
+	line-height: 300px;
+	
+
+	/*atau untuk lebih efisien (Dari kiri atas searah jarum jam)
+	border-radius :0 20px 20px 20px*/;
+
+	/*Untuk menambahkan foto :*/
+	background-image: url(1BorderRadius.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*Langkah Kedua*/
+div img	{
+	height: 200px;
+	width: 200px;
+	border: 3px dashed black;
+	border-radius: 50% 0 50% 0;  
+}

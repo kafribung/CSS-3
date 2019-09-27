@@ -1,0 +1,45 @@
+body {
+	text-align: center;
+}
+/*Filter adalah property css3 yang digunakan untuk memberi efek visual pada gambar, seperti mengatur kecerahan, kontaks*/
+
+/*value dari filter :
+1. blur (px) menggunakan blur guassian
+2. brightnees (angka | %) defaulnya=100% kalau angka= 1, TIDAK PAKAI PX
+3. contrast (angka | %) Membuat warnah lebih mencolok
+4. saturate(angka | %) Membuat warnah menjadi lebih cerah, jika dibawah 100% maka warnah menjadi abu2 
+5. grayscale(angka | %) Membuat warnah menjadi abu2 GUNAKAN 100% OR 1 KALAU LEBIH HASILNYA TETAP SAMA
+6. sepia(angka | 99%) Membuat warnah menjadi kekuningan GUNAKAN 100% OR 1 KALAU LEBIH HASILNYA TETAP SAMA
+7. hue-rotate(deg) Merotasi/merubah warnah
+8. invert(angka | %) Membuat warnah menjadi negatif film GUNAKAN 100% OR 1 KALAU LEBIH HASILNYA TETAP SAMA
+9. opacity(sama dengan opacity css3 yakni 0 sampai 1, )
+10.drop-shadow(Sama dengan box-shadow dan text-shadow)*/
+
+/*Perbedaan antara opacity dan drop-shadow FILTER dengan CSS3, KALAU Filter menggunakan perhiungan 
+matematika dan kemampuan hardware, kalau opacity dan B&T-Shadow css3 menggunakan kemampuan browser
+.KEDUANYA Hasilnya sama tetapi disarankan Mengunakan Filter*/
+
+/*Untuk menumpuk valuenya gunakan spaci BUKAN KOMA: filter: blur(3px) saturate(1) opacity (.5)*/
+
+img {
+	height: 500px;
+	width: 500px;
+	margin: 20px;
+	-webkit-filter: ;
+	-o-filter: ;
+	filter: blur();	
+}
+
+h1 {
+	filter: drop-shadow(5px 5px 3px black);
+}
+
+div {
+	height: 200px;
+	width: 200px;
+	background-color: salmon;
+	margin: auto;
+	/*Untuk banyagan box-shadow lebih baik menggunakan box-shadow dari pada filter, karena box-shadow 
+	  lebih lengkap*/
+	filter: drop-shadow(0 10px 5px black); 
+}

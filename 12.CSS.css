@@ -1,0 +1,52 @@
+/*Transfrom digunakan untuk memanipulasi atau merubah format visual dari elemen html*/
+/*Tranfrom tidak memengaruhi elemen HTML YG LAINNYA*/
+/*Transfrom ada 2 jenis : 2D dan 3D tetapi kita hanya mempelajari yang 2 D*/
+
+
+/*Fungsi yg dapat digunakan :
+1. Scale (Untuk memperbesar / memperkecil ukuran elemen html)
+2. Rotate (Untuk memutar elemen HTML)
+3. Skew (Untuk membuat condong/ miring)
+4. Translite (untuk merubah posisi elemen HTMl)*/
+
+/*Cara penulisan value transfrom :
+AGAR kebalikannya tambahkan mines
+1. transfrom:  scale (angka) or scaleX(nilai Horizontal) scaleY (Nilai Vertikal)
+	Kotaknya akan membesar 1.5 kali dari ukuran awalnya 
+	transform: scale(1.5) bisa juga transform: scale(1.5, 2) or transform: scaleX(1.5) scaleY(2)
+2. transform: rotate(nilai pakai derajat) or rotateX() rotateY();
+	Kotaknya akan berputar 180 derajat
+	transform: rotate(180deg);
+	Kotaknya berputar secara 180 derajar HORIZONTAL
+	transfrom: rotateX(180deg);
+3. Transfrom: skew(nilai deg) or skewX() skew(Y)/  skew dan skweX sama saja tampilannya;
+	Kotaknya akab condong kearah atas 30 derajat secara vertikal karena menggunakan - (Mines)
+	transform: skewY(-30deg);
+4. Transfrom: translite(nilai PX) or transliteX(nilai PX) transliteY(nilai PX);
+	Kotaknya akan berpindah 30px ke arah kanan dan 70px kaarah bawah
+	transfrom: translite(30px, 70px);
+
+	*/
+.kotak {
+	width: 200px;
+	height: 200px;
+	background-color: gray;
+	margin: 20px auto 0;
+	transition: 1s;
+
+}
+.kotak:hover {
+	/*Kotaknya akan membesar 1.5 secara Horizon dan 2 kali secara verikal dari ukuran awalnya 
+	transform: scale(1.5, 2);
+	/*Kotaknya akan berputar 180 deg searah jamum jam, dan secara verikal dan horizonntal
+	transform: rotate(180deg) rotateX(180deg) rotateY(180deg);*/
+/*	Kotaknya akan condong kearah atas secara vertikal karena menggunakan - (Mines)
+	transform: skewX(-20deg);*/
+	/*Kotaknya akan berpindah 30px kekanan dan 30px keaatas(Kaarena Vertikalnya mines)*/
+	transform: translateX(30px) translateY(50px);
+
+}
+
+p {
+	text-align: center;
+}

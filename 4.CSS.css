@@ -1,0 +1,11 @@
+.kotak {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	margin: 20px auto 0;
+
+	/*box-shadow : untuk memberi efek banayangan pada elemen*/
+	/*valuenye : x-offest y-offset blur color*/
+	box-shadow: -5px -5px 12px black;
+    border-radius: 20% 50% 50% 0;
+}

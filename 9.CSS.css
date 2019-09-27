@@ -1,0 +1,50 @@
+/*@font-face digunakan untuk memberi font pada teks*/
+/*Pada dasarnya jika ingin memberikan font pada teks kita bisa menggunakan font-family*/
+/*Kekurangan font-family yakni jika font yg yg kita berikan tidak terdapat di laptop user, 
+maka font yg diberikan tidak akan muncul*/
+/*Agar font berlaku secara universal maka kita harus menggunakan @font-face*/
+/*Ada dua cara agar font menjadi universal :
+  1. Menggunakan link font google : www.font.google.com (Kita saling linknya di html 
+  dan sintaks fontnya dicss) /harus online
+  2.Donwload font dan simpan didalam folder html, dan gunakan @font-face*/
+
+  /*Format Font*/
+  /*font-family: 'open_sansextrabold_italic';
+  src: url('OpenSans-ExtraBoldItalic-webfont.eot');
+  src: url('OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('OpenSans-ExtraBoldItalic-webfont.woff2') format('woff2'),
+  url('OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+  url('OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
+  url('OpenSans-ExtraBoldItalic-webfont.svg#open_sansextrabold_italic') format('svg');*/
+
+
+/*Untuk mengkonversi format ttf ke woof atau ke woof2 gunakan generator fontsquirrel.com*/
+  @font-face {
+  	/*Font di donwload dengan format ttf*/
+  	font-family: "After Shok";
+  	src: url('Font_Universal/After_Shok.ttf') format('truetype');
+  }
+
+  @font-face {
+  	/*Font di donwload dengan format woff, DISARANKAN untuk WEB agar loadnya lebih cepat*/
+  	font-family: 'open_sansextrabold_italic';
+  	src: url('Font_Universal/OpenSans-ExtraBoldItalic-webfont.woff') format('woff');
+  	font-weight: normal;
+  	font-style: normal;
+
+  }
+
+
+  .satu {
+  	/*Font dari google dan harus terkoneksi internet*/
+  	font-family: 'Righteous', cursive;
+  }
+
+
+  .dua {
+  	font-family: "After Shok", sans-serif;
+  }
+
+  .tiga {
+  	font-family: "open_sansextrabold_italic", serif;
+  }

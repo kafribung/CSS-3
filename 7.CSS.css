@@ -1,0 +1,29 @@
+body {
+	background: linear-gradient(to right, blue, green, red);
+}
+div	{
+	width: 300px;
+	height: 300px;
+}
+.satu {
+	margin: 20px auto; 
+	/*Linear-gradient digunakan untuk memberi warnah gradasi pada pertemuan warnah*/
+	/*Linear-gradient tidak termasuk CSS3 tetapi value baru dari backgeound*/
+	/*Untuk memberikan arah bisa menggunakan : Sudut, dan arah*/
+	/*Kita bisa Memberikan warnah lebih dari satu*/
+	/*1.Sudut =90 (Dari Kiri ke Kanan
+	          =-90(Kanan-kekiri)
+	          =45 (Daigonal)*/
+	/*2.Arah= to left (kanan ke kiri)
+	          to bottom (atas ke bawah)
+	          to right (kiri ke kanan)
+	          to top (bawah ke atas
+	          to left top (bawah kanan)*/
+
+	background: linear-gradient(-90deg,limegreen,red,blue,yellow,salmon);
+}
+.dua {
+	margin: 20px auto;
+	/*Color Stop digunakan untuk mengetur keseimabangan warnah yang diinginkan*/
+	background: linear-gradient(to right,blue 20%,green 80%);
+}
